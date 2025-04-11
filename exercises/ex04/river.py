@@ -53,10 +53,19 @@ class River:
         self.bears = new_bears
 
     def repopulate_fish(self):
-        return None
+        i: int = 1
+        while i <= (len(self.fish) // 2):
+            self.fish.append(Fish())
+            self.fish.append(Fish())
+            self.fish.append(Fish())
+            self.fish.append(Fish())
+            i += 1
 
     def repopulate_bears(self):
-        return None
+        i: int = 1
+        while i <= (len(self.bears) // 2):
+            self.bears.append(Bear())
+            i += 1
 
     def view_river(self):
         print(f"~~~ Day {self.day}: ~~~")
